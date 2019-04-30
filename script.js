@@ -12,7 +12,7 @@ if(question === "yes"){
 }else{
     window.prompt("Maybee next time.");
 }
-while (userHealth > 0 && grantHealth > + 0) {
+while (userHealth > 0 && grantHealth >  0) {
    userHealth -= Math.floor((Math.random() * 2) + 1);
    console.log(`${userName} has ${userHealth} left`);
    grantHealth -= Math.floor((Math.random() * 2) + 1);
@@ -20,7 +20,12 @@ while (userHealth > 0 && grantHealth > + 0) {
    if (grantHealth <= 0) {
       userWin++;
       grantHealth = 10;
+   }else if(userHealth <= 0){
+       console.log("You lost");
+       break;
+   }else if(userWin === 3){
+    break;
    }
-}
-console.log(`${userName} won ${userWin} games`);
+}console.log(`${userName} won ${userWin} games`);
+
 
